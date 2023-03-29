@@ -7,15 +7,17 @@ import jakarta.persistence.*;
 @Table(name="Laptop")
 public class Laptop {
     @Id
-    @GeneratedValue(strategy= GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String laptopID;
     @Column
-    private String tradeMark;
+    private String trademark;
+    @Column
+    private Double price;
 
 
-    public Laptop(String laptopID, String tradeMark) {
-        this.laptopID=laptopID;
-        this.tradeMark=tradeMark;
+    public Laptop(String trademark, Double price) {
+        this.trademark=trademark;
+        this.price=price;
     }
 
     public Laptop() {
@@ -29,11 +31,19 @@ public class Laptop {
         this.laptopID=laptopID;
     }
 
-    public String getTradeMark() {
-        return tradeMark;
+    public String getTrademark() {
+        return trademark;
     }
 
-    public void setTradeMark(String tradeMark) {
-        this.tradeMark=tradeMark;
+    public void setTrademark(String trademark) {
+        this.trademark=trademark;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price=price;
     }
 }

@@ -29,7 +29,7 @@ public class LaptopService {
     }
 
     public Laptop updateLaptop(Laptop laptop) {
-        Laptop oldLaptop = laptopRepository.findById(laptop.getLaptopID()).orElseThrow();
+        //Laptop oldLaptop = laptopRepository.findById(laptop.getLaptopID()).orElseThrow();
         return laptopRepository.save(laptop);
     }
 

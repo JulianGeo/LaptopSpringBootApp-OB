@@ -33,7 +33,7 @@ public class LaptopController {
         return ResponseEntity.ok().body(service.saveLaptop(laptop));
     }
 
-    @PutMapping("laptops/{id}")
+    @PutMapping("laptops")
     public ResponseEntity<Laptop> updateLaptop(@RequestBody Laptop laptop){
         if (laptop.getLaptopID() == null){return  ResponseEntity.badRequest().build();}
         return ResponseEntity.ok().body(service.updateLaptop(laptop));
